@@ -1,1 +1,1 @@
-# Cartilha-de-Ajuda-Depend-ncia-Quimica
+# Cartilha-de-Ajuda-Dependencia-Quimica
