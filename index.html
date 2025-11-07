@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartilha - Como Solicitar Ajuda para Dependência Química</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            min-height: 100vh;
+        }
+
+        .page-wrapper {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+
+        /* SIDEBAR MENU */
+        .sidebar {
+            width: 280px;
+            background: white;
+            padding: 20px;
+            box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar-header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .sidebar-header h3 {
+            margin: 0;
+            font-size: 1.3em;
+            color: white;
+        }
+
+        .sidebar-header p {
+            margin: 8px 0 0 0;
+            font-size: 0.85em;
+            opacity: 1;
+            color: white;
+            font-weight: 500;
+        }
+
+        .menu-section {
+            margin-bottom: 15px;
+        }
+
+        .menu-item {
+            background: #f8f9fa;
+            border: none;
+            border-left: 4px solid transparent;
+            padding: 15px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            text-align: left;
+            color: #333;
+        }
+
+        .menu-item:hover {
+            background: #e3f2fd;
+            transform: translateX(5px);
+            border-left-color: #1e3a5f;
+        }
+
+        .menu-item.active {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            border-left-color: #0d1b2a;
+            transform: translateX(5px);
+        }
+
+        .menu-icon {
+            font-size: 1.3em;
+            min-width: 25px;
+            text-align: center;
+        }
+
+        .emergency-menu {
+            background: linear-gradient(135deg, #FF6B6B 0%, #EE5A6F 100%);
+            color: white !important;
+            border-left-color: #cc0000 !important;
+            animation: pulse 2s infinite;
+        }
+
+        .emergency-menu:hover {
+            background: linear-gradient(135deg, #EE5A6F 0%, #FF6B6B 100%);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(255, 107, 107, 0);
+            }
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .university-badge {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .university-badge h4 {
+            margin: 0;
+            font-size: 1.1em;
+            color: white;
+        }
+
+        .university-badge p {
+            margin: 5px 0 0 0;
+            font-size: 0.95em;
+            opacity: 0.95;
+        }
+
+        h1 {
+            color: #1e3a5f;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #1e3a5f;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #2c5282;
+        }
+
+        h3 {
+            color: #1e3a5f;
+            font-size: 1.5em;
+            margin: 25px 0 15px 0;
+        }
+
+        h4 {
+            color: #2c5282;
+            font-size: 1.2em;
+            margin: 15px 0 10px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .accordion {
+            margin: 20px 0;
+        }
+
+        .accordion-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .accordion-header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 18px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            opacity: 0.9;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s ease;
+            font-size: 1.3em;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 25px;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 2000px;
+            padding: 20px 25px;
+        }
+
+        .help-card {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .help-card h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .help-card a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: #e3f2fd;
+            border-left: 5px solid #1e3a5f;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .icon {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 1.3em;
+        }
+
+        ul {
+            margin: 15px 0;
+            padding-left: 40px;
+        }
+
+        ol {
+            margin: 15px 0;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #1e3a5f;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #2c5282;
+            text-decoration: underline;
+        }
+
+        .info-box a {
+            color: #1e3a5f;
+            font-weight: bold;
+        }
+
+        .emergency-box {
+            background: linear-gradient(135deg, #FF6B6B 0%, #EE5A6F 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .hope-message {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            color: #0d47a1;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.1em;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .hope-message h2 {
+            color: #1e3a5f;
+            border-bottom: none;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: white;
+            text-align: center;
+            color: #1e3a5f;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer strong {
+            color: #1e3a5f;
+        }
+
+        /* MOBILE MENU */
+        .mobile-menu-toggle {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2em;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 992px) {
+            .page-wrapper {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: fixed;
+                left: -300px;
+                top: 0;
+                width: 280px;
+                height: 100vh;
+                z-index: 999;
+                transition: left 0.3s ease;
+            }
+
+            .sidebar.active {
+                left: 0;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .main-content {
+                width: 100%;
+                padding-top: 70px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+
+            .overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.5);
+                z-index: 998;
+            }
+
+            .overlay.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰ Menu</button>
+    <div class="overlay" onclick="toggleMobileMenu()"></div>
+
+    <div class="page-wrapper">
+        <!-- SIDEBAR MENU -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>💙 Cartilha de Ajuda</h3>
+                <p>Dependência Química</p>
+            </div>
+
+            <div class="menu-section">
+                <button class="menu-item active" onclick="showSection('inicio')">
+                    <span class="menu-icon">🏠</span>
+                    <span>Início</span>
+                </button>
+
+                <button class="menu-item emergency-menu" onclick="showSection('ajuda')">
+                    <span class="menu-icon">🆘</span>
+                    <span>Emergência & Ajuda Imediata</span>
+                </button>
+                
+                <button class="menu-item" onclick="showSection('como-buscar')">
+                    <span class="menu-icon">📞</span>
+                    <span>Como Buscar Ajuda</span>
+                </button>
+                
+                <button class="menu-item" onclick="showSection('passos')">
+                    <span class="menu-icon">✅</span>
+                    <span>Primeiros Passos</span>
+                </button>
+                
+                <button class="menu-item" onclick="showSection('tratamentos')">
+                    <span class="menu-icon">🏥</span>
+                    <span>Tipos de Tratamento</span>
+                </button>
+                
+                <button class="menu-item" onclick="showSection('introducao')">
+                    <span class="menu-icon">📖</span>
+                    <span>Entendendo o Problema</span>
+                </button>
+                
+                <button class="menu-item" onclick="showSection('prevencao')">
+                    <span class="menu-icon">🛡️</span>
+                    <span>Prevenção de Recaída</span>
+                </button>
+                
+                <button class="menu-item" onclick="showSection('esperanca')">
+                    <span class="menu-icon">✨</span>
+                    <span>Mensagem de Esperança</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <div class="container">
+                <header>
+                    <div class="university-badge">
+                        <h4>📚 Trabalho Universitário</h4>
+                        <p>Cartilha Educativa sobre Dependência Química</p>
+                    </div>
+                    <h1>💙 Como Solicitar Ajuda para Dependência Química</h1>
+                    <p class="subtitle">Guia prático: o que fazer e onde buscar apoio</p>
+                </header>
+
+                <!-- SEÇÃO: INÍCIO -->
+                <div id="inicio" class="content-section active">
+                    <h2>💙 Bem-vindo à Cartilha sobre Dependência Química</h2>
+                    
+                    <div class="highlight-box">
+                        <h3>📌 Sobre esta Cartilha</h3>
+                        <p>Este material foi desenvolvido para ajudar você a entender o que é dependência química e, principalmente, <strong>mostrar que existe ajuda disponível e que a recuperação é possível</strong>.</p>
+                        <p>Seja você alguém que está enfrentando problemas com substâncias, um familiar ou amigo preocupado, aqui você encontrará informações práticas e acolhedoras.</p>
+                    </div>
+
+                    <h3>📖 O que é Dependência Química?</h3>
+                    <p>A dependência química é uma <strong>condição médica crônica</strong> que afeta o cérebro e o comportamento de uma pessoa. Ela é caracterizada pelo uso compulsivo de substâncias (drogas ou álcool) mesmo quando isso causa consequências negativas graves na vida da pessoa.</p>
+
+                    <div class="info-box">
+                        <h4>⚠️ Importantes esclarecimentos:</h4>
+                        <ul>
+                            <li><strong>NÃO é falta de caráter</strong> - É uma doença que precisa de tratamento</li>
+                            <li><strong>NÃO é falta de força de vontade</strong> - É uma alteração neurológica real</li>
+                            <li><strong>NÃO é vergonha</strong> - É uma condição de saúde como diabetes ou hipertensão</li>
+                            <li><strong>PODE ser tratada</strong> - Com apoio adequado, a recuperação é possível</li>
+                        </ul>
+                    </div>
+
+                    <h3>🧠 Como funciona a dependência?</h3>
+                    <p>Quando uma pessoa usa substâncias químicas repetidamente, essas substâncias alteram o funcionamento do cérebro, especialmente nas áreas responsáveis por:</p>
+                    
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>🎯 Sistema de Recompensa</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>As drogas estimulam artificialmente a liberação de dopamina (neurotransmissor do prazer) em quantidades muito maiores do que as atividades naturais. Com o tempo, o cérebro se adapta e passa a "precisar" da substância para se sentir bem.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>🧩 Controle de Impulsos</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>A capacidade de tomar decisões racionais e controlar impulsos fica comprometida. Por isso é tão difícil "simplesmente parar" - não é apenas uma questão de querer.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>💭 Memória e Aprendizado</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>O cérebro cria associações fortes entre o uso da substância e certas situações, lugares ou emoções. Isso explica os "gatilhos" que podem despertar o desejo de usar.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>⚠️ Sinais de que pode haver um problema</h3>
+                    <div class="highlight-box">
+                        <p>Você ou alguém próximo pode estar desenvolvendo dependência se apresentar alguns destes sinais:</p>
+                        <ul>
+                            <li><strong>Perda de controle:</strong> Usa mais ou por mais tempo do que planejava</li>
+                            <li><strong>Tentativas frustradas:</strong> Já tentou parar ou diminuir várias vezes sem sucesso</li>
+                            <li><strong>Tempo gasto:</strong> Muito tempo pensando em usar, usando ou se recuperando dos efeitos</li>
+                            <li><strong>Fissura:</strong> Desejo intenso e incontrolável de usar</li>
+                            <li><strong>Negligência:</strong> Deixa de cumprir responsabilidades no trabalho, escola ou casa</li>
+                            <li><strong>Problemas sociais:</strong> Continua usando apesar de problemas nos relacionamentos</li>
+                            <li><strong>Abandono de atividades:</strong> Para de fazer coisas que gostava para usar</li>
+                            <li><strong>Uso de risco:</strong> Usa em situações perigosas (dirigindo, operando máquinas)</li>
+                            <li><strong>Tolerância:</strong> Precisa de quantidades maiores para sentir o mesmo efeito</li>
+                            <li><strong>Abstinência:</strong> Sintomas físicos ou psicológicos desagradáveis ao parar</li>
+                        </ul>
+                    </div>
+
+                    <h3>🌟 Por que existe esperança?</h3>
+                    <div class="help-card">
+                        <p><strong>A recuperação é REAL e POSSÍVEL!</strong></p>
+                        <p>Milhões de pessoas em todo o mundo se recuperaram da dependência química e vivem vidas plenas, felizes e produtivas. Com o tratamento adequado e apoio contínuo:</p>
+                        <ul style="text-align: left; margin-top: 10px;">
+                            <li>✅ É possível parar de usar substâncias</li>
+                            <li>✅ O cérebro pode se recuperar (neuroplasticidade)</li>
+                            <li>✅ Relacionamentos podem ser reconstruídos</li>
+                            <li>✅ A saúde física e mental melhora significativamente</li>
+                            <li>✅ É possível encontrar propósito e alegria na vida novamente</li>
+                        </ul>
+                    </div>
+
+                    <h3>👥 A quem esta cartilha se destina?</h3>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Se você está enfrentando problemas com substâncias</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Esta cartilha vai te mostrar:</p>
+                                <ul>
+                                    <li>Onde buscar ajuda gratuitamente</li>
+                                    <li>Quais são os primeiros passos práticos</li>
+                                    <li>Tipos de tratamento disponíveis</li>
+                                    <li>Como prevenir recaídas</li>
+                                </ul>
+                                <p><strong>Lembre-se:</strong> Pedir ajuda é um sinal de força, não de fraqueza!</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Se você é familiar ou amigo de alguém com dependência</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Você encontrará aqui:</p>
+                                <ul>
+                                    <li>Como ajudar sem prejudicar</li>
+                                    <li>Grupos de apoio para familiares</li>
+                                    <li>Como estabelecer limites saudáveis</li>
+                                    <li>Como cuidar de si mesmo nesse processo</li>
+                                </ul>
+                                <p><strong>Importante:</strong> Você também precisa de apoio! A dependência afeta toda a família.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Se você é profissional ou estudante da área</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Este material oferece:</p>
+                                <ul>
+                                    <li>Visão geral acessível sobre dependência química</li>
+                                    <li>Recursos práticos para orientar pacientes/clientes</li>
+                                    <li>Rede de serviços disponíveis no Brasil</li>
+                                    <li>Abordagem empática e sem julgamentos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>🧭 Como usar esta cartilha</h3>
+                    <p>Esta cartilha está organizada em seções que você pode navegar pelo menu lateral:</p>
+                    <ol>
+                        <li><strong>🆘 Emergência:</strong> Para situações urgentes que precisam de atenção imediata</li>
+                        <li><strong>📞 Como Buscar Ajuda:</strong> Passo a passo prático de onde ir e como começar</li>
+                        <li><strong>✅ Primeiros Passos:</strong> Roteiro para quem decidiu buscar tratamento</li>
+                        <li><strong>🏥 Tipos de Tratamento:</strong> Opções disponíveis e para quem são indicadas</li>
+                        <li><strong>📖 Entendendo o Problema:</strong> Informações sobre a natureza da dependência</li>
+                        <li><strong>🛡️ Prevenção de Recaída:</strong> Estratégias para manter a recuperação</li>
+                        <li><strong>✨ Mensagem de Esperança:</strong> Motivação para continuar</li>
+                    </ol>
+
+                    <div class="emergency-box" style="margin-top: 30px;">
+                        <p><strong>⚠️ ATENÇÃO: Se você ou alguém próximo está em situação de emergência</strong></p>
+                        <p>Clique no botão vermelho "Emergência" no menu lateral agora!</p>
+                        <p style="margin-top: 10px;">📞 Ou ligue imediatamente: 192 (SAMU) | 188 (CVV)</p>
+                    </div>
+
+                    <div class="help-card" style="margin-top: 30px;">
+                        <h3>💚 Você está no lugar certo</h3>
+                        <p>Se você chegou até aqui, já deu o primeiro passo: <strong>buscar informação</strong>.</p>
+                        <p>A jornada de recuperação começa com a conscientização e a decisão de buscar ajuda. E você não está sozinho nessa jornada - existem milhares de profissionais, serviços e pessoas em recuperação prontos para apoiar você.</p>
+                        <p style="margin-top: 15px;"><strong>Continue navegando pela cartilha para encontrar o apoio que você precisa. A mudança é possível!</strong></p>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO: EMERGÊNCIA -->
+                <div id="ajuda" class="content-section">
+                    <h2>🆘 Situações de Emergência</h2>
+
+                    <div class="emergency-box">
+                        ⚠️ EM CASO DE EMERGÊNCIA: Ligue 192 (SAMU) ou vá ao pronto-socorro mais próximo
+                    </div>
+
+                    <div class="highlight-box">
+                        <p><strong>Procure ajuda imediata se houver:</strong></p>
+                        <ul>
+                            <li>Overdose ou intoxicação aguda</li>
+                            <li>Risco de suicídio ou autoagressão</li>
+                            <li>Abstinência grave (tremores intensos, convulsões, confusão mental)</li>
+                            <li>Comportamento violento ou agressivo</li>
+                            <li>Desidratação severa ou problemas respiratórios</li>
+                        </ul>
+                        <p style="margin-top: 15px;"><strong>📞 Telefones de Emergência:</strong></p>
+                        <ul>
+                            <li><strong>192</strong> - SAMU (emergências médicas)</li>
+                            <li><strong>190</strong> - Polícia Militar (em caso de violência)</li>
+                            <li><strong>188</strong> - CVV (apoio emocional 24h)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO: COMO BUSCAR AJUDA -->
+                <div id="como-buscar" class="content-section">
+                    <h2>📞 Como Buscar Ajuda - Passo a Passo</h2>
+
+                    <h3>🏥 Sistema Único de Saúde (SUS) - Gratuito e Acessível</h3>
+                    
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>🚪 1º Passo: Unidade Básica de Saúde (UBS)</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <h4>A porta de entrada mais fácil!</h4>
+                                <p><strong>O que fazer:</strong></p>
+                                <ol>
+                                    <li>Procure a UBS/Posto de Saúde do seu bairro</li>
+                                    <li>Fale com o médico ou enfermeiro</li>
+                                    <li>Não precisa de agendamento prévio para buscar orientação</li>
+                                    <li>Leve documento de identidade e cartão SUS (se tiver)</li>
+                                </ol>
+                                <p><strong>O que eles fazem:</strong></p>
+                                <ul>
+                                    <li>Avaliação inicial da situação</li>
+                                    <li>Encaminhamento para serviços especializados (CAPS AD)</li>
+                                    <li>Orientação sobre o tratamento</li>
+                                    <li>Suporte para questões de saúde geral</li>
+                                </ul>
+                                <p style="margin-top: 15px;"><strong>💡 Dica:</strong> Se não souber onde fica a UBS mais próxima, busque no Google "UBS" + nome do seu bairro ou ligue 136 (Disque Saúde).</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>🏥 2º Passo: CAPS AD (Centro de Atenção Psicossocial)</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <h4>O serviço especializado gratuito</h4>
+                                <p>Os CAPS AD são centros especializados em tratamento de dependência química, totalmente gratuitos.</p>
+                                
+                                <p><strong>Serviços oferecidos:</strong></p>
+                                <ul>
+                                    <li>Consultas com psiquiatras e psicólogos</li>
+                                    <li>Grupos terapêuticos</li>
+                                    <li>Oficinas terapêuticas (arte, música, trabalho manual)</li>
+                                    <li>Atendimento familiar</li>
+                                    <li>Medicações gratuitas quando necessário</li>
+                                    <li>Alguns funcionam 24 horas (CAPS AD III)</li>
+                                </ul>
+                                
+                                <p><strong>Como chegar lá:</strong></p>
+                                <ol>
+                                    <li>Pode ir direto ao CAPS AD (sem necessidade de encaminhamento em muitos lugares)</li>
+                                    <li>Ou obter encaminhamento na UBS</li>
+                                    <li>Busque no Google: "CAPS AD" + nome da sua cidade</li>
+                                    <li>Ou ligue 136 (Disque Saúde) para informações</li>
+                                    <li>Consulte o site do Ministério da Saúde: <a href="https://www.gov.br/saude/pt-br" target="_blank">gov.br/saude</a></li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>📞 Linhas de Apoio - Ligue Agora</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <div class="info-box">
+                                    <p><strong>📞 188 - CVV (Centro de Valorização da Vida)</strong></p>
+                                    <ul>
+                                        <li>Apoio emocional 24 horas</li>
+                                        <li>Ligação gratuita</li>
+                                        <li>Também atende por chat e e-mail</li>
+                                        <li>Para momentos de crise, angústia ou quando precisar conversar</li>
+                                    </ul>
+                                    <p style="margin-top: 10px;"><strong>🌐 Site:</strong> <a href="https://cvv.org.br" target="_blank" style="color: #28a745; font-weight: bold;">cvv.org.br</a></p>
+                                </div>
+
+                                <div class="info-box">
+                                    <p><strong>📞 136 - Disque Saúde</strong></p>
+                                    <ul>
+                                        <li>Informações sobre serviços do SUS</li>
+                                        <li>Orientações sobre onde buscar tratamento</li>
+                                        <li>Localização de UBS e CAPS AD</li>
+                                    </ul>
+                                </div>
+
+                                <div class="info-box">
+                                    <p><strong>📞 192 - SAMU</strong></p>
+                                    <ul>
+                                        <li>Emergências médicas</li>
+                                        <li>Intoxicações e overdoses</li>
+                                        <li>Abstinência grave</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>🤝 Grupos de Apoio Mútuo (Gratuitos e Anônimos)</h3>
+                    
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Alcoólicos Anônimos (AA) e Narcóticos Anônimos (NA)</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p><strong>Por que considerar um grupo de apoio?</strong></p>
+                                <ul>
+                                    <li>É totalmente gratuito</li>
+                                    <li>Você não precisa se identificar (é anônimo)</li>
+                                    <li>Basta aparecer - sem inscrição ou agendamento</li>
+                                    <li>Você encontra pessoas que entendem o que está passando</li>
+                                    <li>Disponível em praticamente todas as cidades</li>
+                                    <li>Reuniões presenciais e online</li>
+                                </ul>
+
+                                <div class="info-box">
+                                    <p><strong>🍺 Alcoólicos Anônimos (AA)</strong></p>
+                                    <p>Para pessoas com problemas com álcool</p>
+                                    <p>No site você encontra horários e locais de reuniões na sua cidade</p>
+                                    <p style="margin-top: 10px;"><strong>🌐 Site:</strong> <a href="https://www.aa.org.br" target="_blank" style="color: #28a745; font-weight: bold;">aa.org.br</a></p>
+                                </div>
+
+                                <div class="info-box">
+                                    <p><strong>💊 Narcóticos Anônimos (NA)</strong></p>
+                                    <p>Para pessoas com dependência de qualquer droga</p>
+                                    <p>Reuniões diárias em várias cidades e horários</p>
+                                    <p style="margin-top: 10px;"><strong>🌐 Site:</strong> <a href="https://www.na.org.br" target="_blank" style="color: #28a745; font-weight: bold;">na.org.br</a></p>
+                                </div>
+
+                                <p style="margin-top: 15px;"><strong>💡 Na primeira reunião:</strong> Apenas escute, não precisa falar. As pessoas vão se apresentar e compartilhar suas histórias. Você só fala se quiser.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Grupos para Familiares: Al-Anon e Nar-Anon</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Se você tem um familiar ou amigo com dependência e não sabe como ajudar, estes grupos são para VOCÊ:</p>
+                                
+                                <div class="info-box">
+                                    <p><strong>Al-Anon</strong> (Grupos de apoio para familiares e amigos de pessoas com problemas relacionados ao álcool)</p>
+                                    <p><strong>🌐 Site:</strong> <a href="https://al-anon.org.br" target="_blank" style="color: #28a745; font-weight: bold;">al-anon.org.br</a></p>
+                                </div>
+
+                                <div class="info-box">
+                                    <p><strong>Nar-Anon</strong> (Grupos de apoio para familiares e amigos de pessoas com dependência de drogas)</p>
+                                    <p><strong>🌐 Site:</strong> <a href="https://www.naranon.org.br" target="_blank" style="color: #28a745; font-weight: bold;">naranon.org.br</a></p>
+                                </div>
+
+                                <p><strong>O que você aprende:</strong></p>
+                                <ul>
+                                    <li>Como cuidar de si mesmo</li>
+                                    <li>Como estabelecer limites saudáveis</li>
+                                    <li>Como apoiar sem facilitar o uso</li>
+                                    <li>Como lidar com suas próprias emoções</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>🏥 Opções Particulares</h3>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Clínicas, Consultórios e Comunidades Terapêuticas</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Se você tem condições de pagar ou possui plano de saúde:</p>
+                                <ul>
+                                    <li>Clínicas especializadas em dependência química</li>
+                                    <li>Psiquiatras especializados em adições</li>
+                                    <li>Psicólogos com formação em dependência química</li>
+                                    <li>Comunidades terapêuticas privadas</li>
+                                </ul>
+                                <p><strong>💡 Dica:</strong> Muitos planos de saúde cobrem tratamento para dependência química. Verifique com seu plano!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>🌐 Recursos Online Úteis</h3>
+                    <div class="highlight-box">
+                        <p><strong>Sites com informações e apoio:</strong></p>
+                        <ul>
+                            <li><strong>Ministério da Saúde:</strong> <a href="https://www.gov.br/saude/pt-br" target="_blank">gov.br/saude</a> - Informações sobre serviços do SUS</li>
+                            <li><strong>SENAD:</strong> <a href="https://www.gov.br/senad/pt-br" target="_blank">gov.br/senad</a> - Políticas sobre drogas</li>
+                            <li><strong>CVV:</strong> <a href="https://cvv.org.br" target="_blank">cvv.org.br</a> - Chat online 24h para apoio emocional</li>
+                            <li><strong>Alcoólicos Anônimos:</strong> <a href="https://www.aa.org.br" target="_blank">aa.org.br</a></li>
+                            <li><strong>Narcóticos Anônimos:</strong> <a href="https://www.na.org.br" target="_blank">na.org.br</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO: PRIMEIROS PASSOS -->
+                <div id="passos" class="content-section">
+                    <h2>✅ Primeiros Passos: O Que Fazer Agora</h2>
+
+                    <div class="highlight-box">
+                        <h3>🎯 Reconheça: Este é o Momento Mais Importante</h3>
+                        <p>Se você está lendo isso, já deu o passo mais difícil: reconhecer que precisa de ajuda. Isso não é fraqueza - é coragem!</p>
+                    </div>
+
+                    <h3>📝 Roteiro Prático: Comece Hoje</h3>
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Passo 1: Reconheça que precisa de ajuda</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Admitir que tem um problema com substâncias é o primeiro e mais corajoso passo. Não é vergonha, não é fraqueza - é inteligência e autocuidado.</p>
+                                <p><strong>Sinais de que você pode precisar de ajuda:</strong></p>
+                                <ul>
+                                    <li>Você usa mais ou por mais tempo do que pretendia</li>
+                                    <li>Já tentou parar sozinho várias vezes sem sucesso</li>
+                                    <li>O uso está causando problemas na sua vida (trabalho, família, saúde)</li>
+                                    <li>Você esconde ou mente sobre quanto usa</li>
+                                    <li>Sente sintomas de abstinência quando tenta parar</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Passo 2: Conte para alguém de confiança</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Não faça isso sozinho. Compartilhe sua decisão com:</p>
+                                <ul>
+                                    <li>Um familiar próximo</li>
+                                    <li>Um amigo de confiança</li>
+                                    <li>Líder religioso ou espiritual</li>
+                                    <li>Profissional de saúde</li>
+                                </ul>
+                                <p><strong>O que dizer:</strong> "Eu preciso de ajuda. Estou tendo problemas com [substância] e decidi buscar tratamento. Você pode me apoiar?"</p>
+                                <p><strong>Se não tem com quem falar agora:</strong> Ligue 188 (CVV) - eles vão te escutar sem julgamento.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Passo 3: Escolha por onde começar</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p><strong>Opção A - Mais rápida e sem burocracia:</strong></p>
+                                <p>📍 Vá a uma reunião de AA ou NA HOJE. Procure no Google os horários na sua cidade. Você só precisa aparecer.</p>
+
+                                <p><strong>Opção B - Sistema de saúde:</strong></p>
+                                <p>🏥 Vá amanhã de manhã à UBS do seu bairro. Fale: "Preciso de ajuda para dependência química e gostaria de encaminhamento para o CAPS AD".</p>
+
+                                <p><strong>Opção C - Se tem recursos financeiros:</strong></p>
+                                <p>💼 Procure um psiquiatra especializado em dependência química. Peça indicação ao seu médico ou busque na internet.</p>
+
+                                <p><strong>Opção D - Se está em crise agora:</strong></p>
+                                <p>📞 Ligue 188 (CVV) ou 192 (SAMU)</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Passo 4: Prepare-se para a primeira consulta</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p><strong>Leve com você:</strong></p>
+                                <ul>
+                                    <li>Documento de identidade</li>
+                                    <li>Cartão SUS (se tiver)</li>
+                                    <li>Lista de medicamentos que usa</li>
+                                    <li>Anotações sobre seu uso (quanto, há quanto tempo, tentativas de parar)</li>
+                                </ul>
+
+                                <p><strong>Seja honesto com o profissional sobre:</strong></p>
+                                <ul>
+                                    <li>Quais substâncias você usa</li>
+                                    <li>Quanto e com que frequência</li>
+                                    <li>Há quanto tempo</li>
+                                    <li>Tentativas anteriores de parar</li>
+                                    <li>Outros problemas de saúde</li>
+                                </ul>
+                                <p>💡 Lembre-se: profissionais de saúde estão lá para ajudar, não para julgar!</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Passo 5: Comprometa-se com o processo</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>A recuperação é uma jornada, não um destino. Comprometa-se a:</p>
+                                <ul>
+                                    <li>Comparecer a todas as consultas e sessões</li>
+                                    <li>Seguir o plano de tratamento proposto</li>
+                                    <li>Ser honesto com sua equipe de tratamento</li>
+                                    <li>Participar de grupos de apoio regularmente</li>
+                                    <li>Pedir ajuda quando sentir vontade de usar</li>
+                                    <li>Ser paciente consigo mesmo - a recuperação leva tempo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="help-card">
+                        <h3>⏰ Faça Agora - Não Espere!</h3>
+                        <p><strong>Escolha UMA ação para fazer nas próximas 24 horas:</strong></p>
+                        <ol style="text-align: left;">
+                            <li>Procurar horário de reunião de AA/NA na sua cidade</li>
+                            <li>Anotar o endereço da UBS mais próxima</li>
+                            <li>Ligar 136 e pedir informações sobre CAPS AD</li>
+                            <li>Contar para uma pessoa de confiança sobre sua decisão</li>
+                            <li>Se está em crise: ligar 188 AGORA</li>
+                        </ol>
+                        <p style="margin-top: 15px;"><strong>A recuperação começa com uma decisão seguida de uma ação. Dê esse passo hoje! 💪</strong></p>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO: TIPOS DE TRATAMENTO -->
+                <div id="tratamentos" class="content-section">
+                    <h2>🏥 Tipos de Tratamento Disponíveis</h2>
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span><span class="icon">💊</span>Desintoxicação</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <h3>O primeiro passo seguro</h3>
+                                <p>A desintoxicação envolve a remoção segura da substância do organismo, com acompanhamento médico para controlar os sintomas de abstinência.</p>
+                                <p><strong>Importante:</strong> Este processo deve sempre ocorrer sob supervisão profissional, pois alguns tipos de abstinência (como álcool e benzodiazepínicos) podem ser perigosos e até fatais sem acompanhamento adequado.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span><span class="icon">🏠</span>Tratamento Ambulatorial</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <h3>Flexibilidade e autonomia</h3>
+                                <p>Permite que a pessoa resida em casa enquanto comparece regularmente a sessões de terapia, consultas médicas e grupos de apoio.</p>
+                                <p><strong>Indicado para:</strong></p>
+                                <ul>
+                                    <li>Casos de menor gravidade</li>
+                                    <li>Pessoas com boa rede de suporte familiar</li>
+                                    <li>Continuidade após internação</li>
+                                    <li>Quem precisa manter atividades profissionais ou acadêmicas</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span><span class="icon">🏥</span>Internação Hospitalar</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <h3>Ambiente protegido e estruturado</h3>
+                                <p>Recomendada em situações mais graves, oferece ambiente controlado e seguro, com equipe multidisciplinar disponível 24 horas.</p>
+                                <p><strong>Indicada quando há:</strong></p>
+                                <ul>
+                                    <li>Risco de abstinência grave</li>
+                                    <li>Complicações médicas ou psiquiátricas</li>
+                                    <li>Múltiplas tentativas de tratamento ambulatorial sem sucesso</li>
+                                    <li>Ambiente doméstico que facilita o uso</li>
+                                    <li>Risco para si ou para outros</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span><span class="icon">🌾</span>Comunidades Terapêuticas</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <h3>Ressocialização através da convivência</h3>
+                                <p>Ambientes residenciais que oferecem tratamento de médio a longo prazo (geralmente 6 a 12 meses).</p>
+                                <p><strong>Foco em:</strong></p>
+                                <ul>
+                                    <li>Trabalho terapêutico e laborterapia</li>
+                                    <li>Espiritualidade (respeitando crenças individuais)</li>
+                                    <li>Convivência comunitária e responsabilidades compartilhadas</li>
+                                    <li>Desenvolvimento de habilidades sociais e profissionais</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span><span class="icon">🧠</span>Terapias e Abordagens</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <h3>Tipos de terapia disponíveis:</h3>
+                                <p><strong>Terapia Individual:</strong></p>
+                                <ul>
+                                    <li>Terapia Cognitivo-Comportamental (TCC)</li>
+                                    <li>Entrevista Motivacional</li>
+                                    <li>Terapia de Prevenção de Recaída</li>
+                                </ul>
+
+                                <p><strong>Terapia em Grupo:</strong></p>
+                                <ul>
+                                    <li>Compartilhamento de experiências</li>
+                                    <li>Apoio mútuo</li>
+                                    <li>Aprendizado com outros em recuperação</li>
+                                </ul>
+
+                                <p><strong>Terapia Familiar:</strong></p>
+                                <ul>
+                                    <li>Melhora a comunicação familiar</li>
+                                    <li>Estabelece limites saudáveis</li>
+                                    <li>Reconstrói confiança</li>
+                                </ul>
+
+                                <p><strong>Medicamentos:</strong></p>
+                                <p>Existem medicações aprovadas para auxiliar no tratamento, sempre com prescrição médica.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO: ENTENDENDO O PROBLEMA -->
+                <div id="introducao" class="content-section">
+                    <h2>📖 Entendendo a Dependência Química</h2>
+                    
+                    <p>A dependência química é uma <strong>condição de saúde complexa</strong> que afeta o cérebro e o comportamento. Não é falta de caráter ou força de vontade - é uma doença que requer tratamento adequado e suporte contínuo.</p>
+
+                    <div class="highlight-box">
+                        <h3>⚠️ O que caracteriza a dependência?</h3>
+                        <ul>
+                            <li>Perda de controle sobre o uso da substância</li>
+                            <li>Necessidade crescente de consumo (tolerância)</li>
+                            <li>Sintomas de abstinência ao parar de usar</li>
+                            <li>Continuidade do uso apesar das consequências negativas</li>
+                            <li>Prejuízos na vida pessoal, profissional e nos relacionamentos</li>
+                        </ul>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Como a dependência afeta o cérebro?</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>As substâncias químicas interferem no sistema de recompensa do cérebro, liberando grandes quantidades de dopamina. Com o tempo, o cérebro se adapta e passa a precisar da substância para funcionar normalmente. Isso explica por que parar de usar é tão difícil e por que é necessário tratamento profissional.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>A recuperação é realmente possível?</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p><strong>Sim! A recuperação é totalmente possível.</strong> Milhões de pessoas em todo o mundo vivem vidas plenas e significativas após tratamento para dependência química. Com o tratamento adequado, apoio contínuo e comprometimento pessoal, é possível recuperar a saúde, reconstruir relacionamentos e redescobrir propósito na vida.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Por que algumas pessoas desenvolvem dependência?</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>A dependência resulta de uma combinação de fatores:</p>
+                                <ul>
+                                    <li><strong>Genética:</strong> Histórico familiar aumenta o risco</li>
+                                    <li><strong>Ambiente:</strong> Trauma, estresse, disponibilidade de drogas</li>
+                                    <li><strong>Desenvolvimento cerebral:</strong> Uso na adolescência é mais prejudicial</li>
+                                    <li><strong>Saúde mental:</strong> Depressão, ansiedade, traumas</li>
+                                </ul>
+                                <p>Ninguém escolhe se tornar dependente - é uma interação complexa de múltiplos fatores.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO: PREVENÇÃO DE RECAÍDA -->
+                <div id="prevencao" class="content-section">
+                    <h2>🛡️ Prevenção de Recaída</h2>
+
+                    <p>A recuperação é um <strong>processo contínuo</strong>, não um evento único. A recaída não significa fracasso - ela pode fazer parte do processo de recuperação.</p>
+
+                    <h3>Estratégias Essenciais</h3>
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>🎯 Identificar e Gerenciar Gatilhos</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p><strong>Gatilhos comuns:</strong></p>
+                                <ul>
+                                    <li>Pessoas com quem costumava usar</li>
+                                    <li>Lugares associados ao uso</li>
+                                    <li>Emoções intensas (estresse, raiva, tristeza)</li>
+                                    <li>Situações sociais específicas</li>
+                                </ul>
+                                <p>Desenvolva um plano para cada gatilho: como evitá-lo quando possível e como lidar quando inevitável.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>🏃 Construir Rotinas Saudáveis</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li><strong>Sono regular:</strong> 7-9 horas por noite</li>
+                                    <li><strong>Alimentação nutritiva:</strong> Refeições balanceadas</li>
+                                    <li><strong>Exercícios físicos:</strong> 30 minutos, 3-5 vezes por semana</li>
+                                    <li><strong>Hidratação:</strong> Água suficiente ao longo do dia</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>👥 Desenvolver Rede de Suporte</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Mantenha contato regular com pessoas que apoiam sua recuperação</li>
+                                    <li>Participe de grupos de apoio consistentemente</li>
+                                    <li>Tenha pelo menos 3 pessoas para ligar em momentos difíceis</li>
+                                    <li>Afaste-se de relacionamentos que facilitam o uso</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>🧘 Técnicas de Manejo de Estresse</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Mindfulness e meditação</li>
+                                    <li>Respiração profunda</li>
+                                    <li>Exercícios de relaxamento</li>
+                                    <li>Hobbies e atividades prazerosas</li>
+                                    <li>Conexão com a natureza</li>
+                                    <li>Escrita terapêutica</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>📋 Plano de Emergência</span>
+                                <span class="accordion-icon">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Tenha um plano escrito e acessível:</p>
+                                <ol>
+                                    <li>Lista de sinais de alerta</li>
+                                    <li>Números de emergência (terapeuta, médico, pessoas de confiança)</li>
+                                    <li>Ações imediatas (ligar para alguém, ir a um grupo)</li>
+                                    <li>Lugares seguros para ir</li>
+                                    <li>Lembretes de por que você escolheu a recuperação</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h3>🔄 Se a Recaída Acontecer</h3>
+                        <ul>
+                            <li>Não se culpe - recaída pode fazer parte do processo</li>
+                            <li>Procure ajuda imediatamente</li>
+                            <li>Retome o tratamento o quanto antes</li>
+                            <li>Analise o que levou à recaída</li>
+                            <li>Cada dia limpo é uma vitória</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO: MENSAGEM DE ESPERANÇA -->
+                <div id="esperanca" class="content-section">
+                    <div class="hope-message">
+                        <h2>✨ Mensagem de Esperança</h2>
+                        <p><strong>A recuperação é possível!</strong></p>
+                        <p>Milhões de pessoas em todo o mundo vivem vidas plenas, felizes e significativas após tratamento para dependência química. O caminho pode ser desafiador, mas com tratamento adequado, apoio contínuo e determinação, é possível reconstruir relacionamentos, recuperar a saúde e redescobrir propósito e alegria na vida.</p>
+                        <p><strong>Buscar ajuda é um ato de coragem, não de fraqueza.</strong></p>
+                        <p>Cada dia em recuperação é uma vitória que merece ser celebrada. Você não está sozinho nesta jornada! 💪❤️</p>
+                    </div>
+                </div>
+
+                <footer>
+                    <p><strong>Importante:</strong> Esta cartilha oferece informações gerais. Para orientação específica ao seu caso, consulte profissionais de saúde qualificados.</p>
+                    <p>💙 Trabalho desenvolvido para fins educativos universitários</p>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Remove active class from all sections and buttons
+            const sections = document.querySelectorAll('.content-section');
+            const buttons = document.querySelectorAll('.menu-item');
+            
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Add active class to selected section and button
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
+            
+            // Close mobile menu
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.overlay');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleAccordion(header) {
+            const item = header.parentElement;
+            const wasActive = item.classList.contains('active');
+            
+            // Close all accordion items in the same accordion
+            const accordion = item.parentElement;
+            const items = accordion.querySelectorAll('.accordion-item');
+            items.forEach(i => i.classList.remove('active'));
+            
+            // Toggle current item (if it wasn't active)
+            if (!wasActive) {
+                item.classList.add('active');
+            }
+        }
+
+        function toggleMobileMenu() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a menu item
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 992) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
